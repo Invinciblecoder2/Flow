@@ -400,6 +400,8 @@ const exit = (e) => {
     localStorage.setItem("scores" + id, JSON.stringify(scores));
     sock.emit('chat' + id, username + " left ");
     sock.emit('message' + id, par);
+    document.getElementById('gif').src = './images/Music.png';
+    pause();
     window.close();
 };
 document
